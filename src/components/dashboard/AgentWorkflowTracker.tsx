@@ -23,14 +23,11 @@ interface Agent {
 }
 
 const agents: Agent[] = [
-  { id: 1, name: "Watermarking Agent", shortName: "Watermark", icon: Fingerprint, status: "running", lastActivity: "2 min ago" },
-  { id: 2, name: "Decoy/Honeytoken Agent", shortName: "Honeytoken", icon: FileKey, status: "running", lastActivity: "5 min ago" },
-  { id: 3, name: "Time-Lock Agent", shortName: "Time-Lock", icon: Clock, status: "idle", lastActivity: "12 min ago" },
-  { id: 4, name: "OCR Scanner Agent", shortName: "OCR", icon: ScanText, status: "running", lastActivity: "1 min ago" },
-  { id: 5, name: "NLP Matching Agent", shortName: "NLP", icon: Brain, status: "alert", lastActivity: "Just now" },
-  { id: 6, name: "Behavior Anomaly Agent", shortName: "Anomaly", icon: UserX, status: "running", lastActivity: "3 min ago" },
-  { id: 7, name: "Source Tracing Agent", shortName: "Tracing", icon: MapPin, status: "alert", lastActivity: "Just now" },
-  { id: 8, name: "Alert & Evidence Agent", shortName: "Evidence", icon: AlertCircle, status: "running", lastActivity: "30 sec ago" },
+  { id: 1, name: "Document Security Agent", shortName: "Doc Security", icon: Fingerprint, status: "running", lastActivity: "2 min ago" },
+  { id: 2, name: "Content Scanner Agent", shortName: "Scanner", icon: ScanText, status: "running", lastActivity: "1 min ago" },
+  { id: 3, name: "NLP & Matching Agent", shortName: "NLP Match", icon: Brain, status: "alert", lastActivity: "Just now" },
+  { id: 4, name: "Behavior Anomaly Agent", shortName: "Anomaly", icon: UserX, status: "running", lastActivity: "3 min ago" },
+  { id: 5, name: "Forensics & Alert Agent", shortName: "Forensics", icon: MapPin, status: "alert", lastActivity: "30 sec ago" },
 ];
 
 const statusStyles = {
