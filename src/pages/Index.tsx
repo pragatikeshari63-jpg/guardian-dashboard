@@ -1,13 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { DashboardLayout } from "@/components/layout/DashboardLayout";
+import { AgentWorkflowTracker } from "@/components/dashboard/AgentWorkflowTracker";
+import { PaperManagementTable } from "@/components/dashboard/PaperManagementTable";
+import { LiveThreatFeed } from "@/components/dashboard/LiveThreatFeed";
+import { EvidenceVault } from "@/components/dashboard/EvidenceVault";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <DashboardLayout>
+      <div className="space-y-6 animate-fade-in">
+        {/* Agent Workflow Tracker */}
+        <AgentWorkflowTracker />
+
+        {/* Main Grid: Paper Table + Live Feed */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2">
+            <PaperManagementTable />
+          </div>
+          <div className="lg:col-span-1 min-h-[400px]">
+            <LiveThreatFeed />
+          </div>
+        </div>
+
+        {/* Evidence Vault */}
+        <EvidenceVault />
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 
